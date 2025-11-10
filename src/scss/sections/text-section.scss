@@ -1,0 +1,44 @@
+.text-section {
+	padding: 40px 0px;
+	&.secondary {
+		background-color: #0e283b;
+	}
+	@include media('>=desktop') {
+		padding: 100px 0px;
+	}
+
+	&-content {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		text-align: center;
+		gap: 16px;
+
+		h2 {
+			max-width: 1000px;
+			color: white;
+			font-weight: 400;
+			font-size: 32px;
+			@include media('>=desktop') {
+				font-size: 48px;
+			}
+		}
+
+		p {
+			margin: 0px;
+			color: white;
+			line-height: 180%;
+			font-weight: 300;
+			span {
+				color: #598e89;
+			}
+			strong {
+				font-weight: 700;
+			}
+		}
+
+		a {
+			margin-top: 20px;
+		}
+	}
+}

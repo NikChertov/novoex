@@ -1,0 +1,149 @@
+.insights-section {
+	overflow: hidden;
+	padding: 40px 0px;
+	@include media('>=desktop') {
+		padding: 100px 0px;
+	}
+
+	&-top {
+		display: flex;
+		align-items: center;
+		flex-wrap: wrap;
+		gap: 20px;
+		justify-content: space-between;
+
+		h2 {
+			margin: 0px;
+			font-size: 32px;
+			color: #00a5d8;
+			font-weight: 400;
+			@include media('>=desktop') {
+				font-size: 48px;
+			}
+		}
+	}
+
+	&-search {
+		max-width: fit-content;
+		display: flex;
+		align-items: center;
+		gap: 12px;
+
+		&-label {
+			margin: 0px;
+			font-size: 16px;
+			color: #00a5d8;
+			font-weight: 300;
+			@include media('>=desktop') {
+				font-size: 20px;
+			}
+		}
+	}
+
+	&-slider {
+		margin-top: 40px;
+		overflow: visible;
+		@include media('>=desktop') {
+			margin-top: 60px;
+		}
+	}
+
+	&-slide {
+		opacity: 0.5;
+		box-sizing: border-box !important;
+		display: grid;
+		transition: all 0.25s ease 0s;
+		@include media('>=desktop') {
+			grid-template-columns: 1fr 1fr;
+		}
+
+		&.swiper-slide-active {
+			opacity: 1;
+		}
+
+		&-card {
+			display: flex;
+			flex-direction: column;
+			&-image {
+				aspect-ratio: 1/0.6;
+			}
+			&-text {
+				margin: 0px;
+				color: white;
+				font-size: 18px;
+				background-color: #0b5852;
+				padding: 12px 16px;
+				@include media('>=desktop') {
+					font-size: 24px;
+					font-weight: 300;
+					padding: 16px 32px;
+				}
+
+				a {
+					color: white;
+					font-weight: 700;
+					
+					&:hover {
+						text-decoration: underline;
+					}
+				}
+			}
+		}
+
+		&-grid {
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+
+			.insights-section-slide-card {
+				&:nth-child(1),
+				&:nth-child(4) {
+					.insights-section-slide-card-text {
+						background-color: #00a5d8;
+					}
+				}
+				&-text {
+					padding: 8px 10px;
+					font-size: 14px;
+
+					@include media('>=desktop') {
+						padding: 12px 18px;
+						font-size: 18px;
+					}
+				}
+			}
+		}
+	}
+
+	&-btn-prev,
+	&-btn-next {
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+		width: 40px;
+		height: 40px;
+		cursor: pointer;
+		background-color: transparent;
+		border: 0px;
+		border-radius: 50%;
+		z-index: 3;
+	}
+
+	&-btn-prev {
+		left: 10px;
+
+		@include media('>=desktop') {
+			left: -60px;
+		}
+
+		img {
+			transform: rotate(180deg);
+		}
+	}
+
+	&-btn-next {
+		right: 10px;
+		@include media('>=desktop') {
+			right: -60px;
+		}
+	}
+}

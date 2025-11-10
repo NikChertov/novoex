@@ -1,0 +1,8 @@
+{
+	"files.autoSave": "onFocusChange",
+	"editor.insertSpaces": false,
+	"editor.wordWrap": "wordWrapColumn",
+	"editor.wordWrapColumn": 140,
+	"files.eol": "\n",
+	"prettier.printWidth": 180,
+}

@@ -1,0 +1,142 @@
+.grid-section {
+	padding: 40px 0px;
+	@include media('>=desktop') {
+		padding: 100px 0px;
+	}
+	&-row {
+		display: flex;
+		flex-direction: column;
+
+		@include media('>=desktop') {
+			flex-direction: row;
+		}
+
+		&:first-child {
+			.grid-section-column {
+				&:first-child {
+					.grid-section-item {
+						&:first-child {
+							background-color: #005149;
+						}
+					}
+				}
+				&:last-child {
+					.grid-section-item {
+						flex-direction: column;
+						background-color: #00a6d8;
+						gap: 0px;
+						text-align: center;
+					}
+				}
+			}
+		}
+		&:nth-child(2) {
+			border-top: 1px solid gray;
+			border-bottom: 1px solid gray;
+			.grid-section-column {
+				&:nth-child(2) {
+					min-width: 60%;
+
+					.grid-section-item {
+						background-color: #0e283b;
+						flex-direction: column;
+
+						h3 {
+							font-size: 32px;
+							@include media('>=desktop') {
+								font-size: 48px;
+							}
+						}
+					}
+				}
+			}
+		}
+
+		&:last-child {
+			.grid-section-column {
+				&:first-child {
+					.grid-section-item {
+						&:first-child {
+							background-color: #005149;
+						}
+						&:last-child {
+							background-color: #00a6d8;
+						}
+					}
+				}
+				&:last-child {
+					.grid-section-item {
+						flex-direction: column;
+						background-image: url('../images/leaders-bg.png');
+						background-size: cover;
+						background-position: center;
+						background-repeat: no-repeat;
+						gap: 0px;
+						text-align: center;
+
+						h2 {
+							@include media('>=desktop') {
+								font-size: 96px;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+	&-column {
+		display: flex;
+		flex-direction: column;
+		flex: 1 0;
+
+		h2 {
+			margin: 0px;
+			color: white;
+			font-size: 48px;
+			font-weight: 400;
+			@include media('>=desktop') {
+				font-size: 72px;
+			}
+		}
+
+		h3 {
+			margin: 0px;
+			font-size: 20px;
+			color: white;
+			line-height: 130%;
+			font-weight: 400;
+			@include media('>=desktop') {
+				font-size: 24px;
+			}
+			span {
+				font-size: 32px;
+				@include media('>=desktop') {
+					font-size: 40px;
+				}
+			}
+		}
+		
+		p {
+			margin: 0px;
+			font-size: 16px;
+			color: white;
+			line-height: 150%;
+			font-weight: 300;
+		}
+
+		img {
+			max-height: 200px;
+		}
+	}
+
+	&-item {
+		padding: 16px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		gap: 12px;
+		flex: 1 0;
+		min-height: 100px;
+	}
+}
