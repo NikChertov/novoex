@@ -1,0 +1,633 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Web Starter Kit</title>
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"
+  />
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/choices.js/public/assets/styles/choices.min.css"
+  />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Radley:ital@0;1&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <link media="all" rel="stylesheet" href="assets/css/vendor.min.css">
+  <link media="all" rel="stylesheet" href="assets/css/styles.min.css">
+</head>
+
+<body>
+  <div class="wrapper">
+    <header class="header">
+      <div class="header-body">
+        <nav class="header-menu">
+          <button class="header-menu-burger js-burger">
+            <span></span>
+          </button>
+          <ul class="header-menu-list js-nav">
+            <li class="header-menu-item">
+              <a href="#" class="header-menu-link">Home</a>
+            </li>
+            <li class="header-menu-item">
+              <a href="#" class="header-menu-link">About us</a>
+            </li>
+            <li class="header-menu-item">
+              <a href="#" class="header-menu-link">Sector Experience</a>
+            </li>
+            <li class="header-menu-item">
+              <a href="#" class="header-menu-link">Client Services</a>
+            </li>
+            <li class="header-menu-item">
+              <a href="#" class="header-menu-link">Case Studies</a>
+            </li>
+            <li class="header-menu-item">
+              <a href="#" class="header-menu-link">Candidate Support</a>
+            </li>
+            <li class="header-menu-item">
+              <a href="#" class="header-menu-link">Executive Roles Offices</a>
+            </li>
+          </ul>
+        </nav>
+        <div class="header-search">
+          <p>Assignment Search:</p>
+          <select name="header-search-sector" class="new-select" id="header-search-sector">
+    				<option value="Sector">Sector</option>
+    			</select>
+          <select name="header-search-role" class="new-select" id="header-search-role">
+    				<option value="Role">Role</option>
+    			</select>
+        </div>
+        <div class="header-actions">
+          <a href="#" class="header-action-link">Call Us 
+            <span>
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 32 32" version="1.1">
+              <g id="icomoon-ignore">
+              </g>
+              <path d="M23.086 1.606h-14.173c-0.797 0-1.444 0.647-1.444 1.444v25.901c0 0.798 0.647 1.444 1.444 1.444h14.173c0.797 0 1.444-0.646 1.444-1.444v-25.901c0-0.797-0.647-1.444-1.444-1.444zM23.464 28.951c0 0.208-0.169 0.377-0.377 0.377h-14.173c-0.208 0-0.377-0.169-0.377-0.377v-4.95h14.928v4.95zM23.464 22.934h-14.928v-17.042h14.928v17.042zM23.464 4.826h-14.928v-1.776c0-0.208 0.169-0.378 0.377-0.378h14.173c0.208 0 0.377 0.17 0.377 0.378v1.776z" fill="#000000">
+
+              </path>
+              <path d="M14.401 26.129h3.199v1.066h-3.199v-1.066z" fill="#000000">
+
+              </path>
+            </svg>
+            </span>
+          </a>
+          <a href="#" class="header-action-link">Email Us
+            <span>
+              <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="_x32_" viewBox="0 0 512 512" xml:space="preserve">
+              <g>
+                <path class="st0" d="M510.678,112.275c-2.308-11.626-7.463-22.265-14.662-31.054c-1.518-1.915-3.104-3.63-4.823-5.345   c-12.755-12.818-30.657-20.814-50.214-20.814H71.021c-19.557,0-37.395,7.996-50.21,20.814c-1.715,1.715-3.301,3.43-4.823,5.345   C8.785,90.009,3.63,100.649,1.386,112.275C0.464,116.762,0,121.399,0,126.087V385.92c0,9.968,2.114,19.55,5.884,28.203   c3.497,8.26,8.653,15.734,14.926,22.001c1.59,1.586,3.169,3.044,4.892,4.494c12.286,10.175,28.145,16.32,45.319,16.32h369.958   c17.18,0,33.108-6.145,45.323-16.384c1.718-1.386,3.305-2.844,4.891-4.43c6.27-6.267,11.425-13.741,14.994-22.001v-0.064   c3.769-8.653,5.812-18.171,5.812-28.138V126.087C512,121.399,511.543,116.762,510.678,112.275z M46.509,101.571   c6.345-6.338,14.866-10.175,24.512-10.175h369.958c9.646,0,18.242,3.837,24.512,10.175c1.122,1.129,2.179,2.387,3.112,3.637   L274.696,274.203c-5.348,4.687-11.954,7.002-18.696,7.002c-6.674,0-13.276-2.315-18.695-7.002L43.472,105.136   C44.33,103.886,45.387,102.7,46.509,101.571z M36.334,385.92V142.735L176.658,265.15L36.405,387.435   C36.334,386.971,36.334,386.449,36.334,385.92z M440.979,420.597H71.021c-6.281,0-12.158-1.651-17.174-4.552l147.978-128.959   l13.815,12.018c11.561,10.046,26.028,15.134,40.36,15.134c14.406,0,28.872-5.088,40.432-15.134l13.808-12.018l147.92,128.959   C453.137,418.946,447.26,420.597,440.979,420.597z M475.666,385.92c0,0.529,0,1.051-0.068,1.515L335.346,265.221L475.666,142.8   V385.92z"/>
+              </g>
+              </svg>
+            </span> 
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <main class="main">
+      <div class="hero-section">
+      	<div class="hero-section-slider swiper">
+      		<div class="swiper-wrapper">
+      			<div class="hero-section-slide swiper-slide">
+      				<div class="hero-section-slide-bg">
+      					<img src="/assets/images/hero-section-bg.png" alt="hero-section-bg">
+      				</div>
+      				<div class="hero-section-slide-content">
+      					<div class="hero-section-logo">
+      						<img src="/assets/images/hero-section-logo.png" alt="hero-section-logo">
+      					</div>
+      					<div class="container">
+      						<h1><span>Executive Search</span> & Headhunting Services</h1>
+      						<span class="hero-section-slide-divider"></span>
+      						<p class="hero-section-slide-text">We know the difference that outstanding leaders Make</p>
+      						<div class="hero-section-slide-buttons">
+      							<a href="#" class="button primary">Let’s talk</a>
+      							<a href="#" class="button secondary">Watch the Video</a>
+      						</div>
+      					</div>
+      				</div>
+      			</div>
+      		</div>
+      		<div class="swiper-pagination"></div>
+      	</div>
+      </div>
+      <div class="insights-section">
+      	<div class="container">
+      		<div class="insights-section-top">
+      			<h2>Insights</h2>
+      			<div class="insights-section-search">
+      				<p class="insights-section-search-label">Custom Search</p>
+      				<select name="search" class="new-select" id="insights-section-search-select">
+      					<option value="Sector">Sector</option>
+      				</select>
+      			</div>
+      		</div>
+
+      		<div class="insights-section-slider swiper">
+      			<div class="swiper-wrapper">
+      				<div class="swiper-slide insights-section-slide">
+      					<div class="insights-section-slide-card">
+      						<img class="insights-section-slide-card-image" src="/assets/images/insights-1.png" alt="insights-1">
+      						<p class="insights-section-slide-card-text">Executive Search vs Internal Recruiters for Senior Hires <a href="#">READ MORE</a></p>
+      					</div>
+      					<div class="insights-section-slide-grid">
+      						<div class="insights-section-slide-card">
+      							<img class="insights-section-slide-card-image" src="/assets/images/insights-2.png" alt="insights-2">
+      							<p class="insights-section-slide-card-text">How to Use Talent Insights for Better Succession Planning <a href="#">READ MORE</a></p>
+      						</div>
+      						<div class="insights-section-slide-card">
+      							<img class="insights-section-slide-card-image" src="/assets/images/insights-3.png" alt="insights-3">
+      							<p class="insights-section-slide-card-text">Creating a High-Performing Leadership Team: Where to Start <a href="#">READ MORE</a></p>
+      						</div>
+      						<div class="insights-section-slide-card">
+      							<img class="insights-section-slide-card-image" src="/assets/images/insights-4.png" alt="insights-4">
+      							<p class="insights-section-slide-card-text">Creating a High-Performing Leadership Team: Where to Start <a href="#">READ MORE</a></p>
+      						</div>
+      						<div class="insights-section-slide-card">
+      							<img class="insights-section-slide-card-image" src="/assets/images/insights-5.png" alt="insights-5">
+      							<p class="insights-section-slide-card-text">How to Use Talent Insights for Better Succession Planning <a href="#">READ MORE</a></p>
+      						</div>
+      					</div>
+      				</div>
+      				<div class="swiper-slide insights-section-slide">
+      					<div class="insights-section-slide-card">
+      						<img class="insights-section-slide-card-image" src="/assets/images/insights-1.png" alt="insights-1">
+      						<p class="insights-section-slide-card-text">Executive Search vs Internal Recruiters for Senior Hires <a href="#">READ MORE</a></p>
+      					</div>
+      					<div class="insights-section-slide-grid">
+      						<div class="insights-section-slide-card">
+      							<img class="insights-section-slide-card-image" src="/assets/images/insights-2.png" alt="insights-2">
+      							<p class="insights-section-slide-card-text">How to Use Talent Insights for Better Succession Planning <a href="#">READ MORE</a></p>
+      						</div>
+      						<div class="insights-section-slide-card">
+      							<img class="insights-section-slide-card-image" src="/assets/images/insights-3.png" alt="insights-3">
+      							<p class="insights-section-slide-card-text">Creating a High-Performing Leadership Team: Where to Start <a href="#">READ MORE</a></p>
+      						</div>
+      						<div class="insights-section-slide-card">
+      							<img class="insights-section-slide-card-image" src="/assets/images/insights-4.png" alt="insights-4">
+      							<p class="insights-section-slide-card-text">Creating a High-Performing Leadership Team: Where to Start <a href="#">READ MORE</a></p>
+      						</div>
+      						<div class="insights-section-slide-card">
+      							<img class="insights-section-slide-card-image" src="/assets/images/insights-5.png" alt="insights-5">
+      							<p class="insights-section-slide-card-text">How to Use Talent Insights for Better Succession Planning <a href="#">READ MORE</a></p>
+      						</div>
+      					</div>
+      				</div>
+      				<div class="swiper-slide insights-section-slide">
+      					<div class="insights-section-slide-card">
+      						<img class="insights-section-slide-card-image" src="/assets/images/insights-1.png" alt="insights-1">
+      						<p class="insights-section-slide-card-text">Executive Search vs Internal Recruiters for Senior Hires <a href="#">READ MORE</a></p>
+      					</div>
+      					<div class="insights-section-slide-grid">
+      						<div class="insights-section-slide-card">
+      							<img class="insights-section-slide-card-image" src="/assets/images/insights-2.png" alt="insights-2">
+      							<p class="insights-section-slide-card-text">How to Use Talent Insights for Better Succession Planning <a href="#">READ MORE</a></p>
+      						</div>
+      						<div class="insights-section-slide-card">
+      							<img class="insights-section-slide-card-image" src="/assets/images/insights-3.png" alt="insights-3">
+      							<p class="insights-section-slide-card-text">Creating a High-Performing Leadership Team: Where to Start <a href="#">READ MORE</a></p>
+      						</div>
+      						<div class="insights-section-slide-card">
+      							<img class="insights-section-slide-card-image" src="/assets/images/insights-4.png" alt="insights-4">
+      							<p class="insights-section-slide-card-text">Creating a High-Performing Leadership Team: Where to Start <a href="#">READ MORE</a></p>
+      						</div>
+      						<div class="insights-section-slide-card">
+      							<img class="insights-section-slide-card-image" src="/assets/images/insights-5.png" alt="insights-5">
+      							<p class="insights-section-slide-card-text">How to Use Talent Insights for Better Succession Planning <a href="#">READ MORE</a></p>
+      						</div>
+      					</div>
+      				</div>
+      				<div class="swiper-slide insights-section-slide">
+      					<div class="insights-section-slide-card">
+      						<img class="insights-section-slide-card-image" src="/assets/images/insights-1.png" alt="insights-1">
+      						<p class="insights-section-slide-card-text">Executive Search vs Internal Recruiters for Senior Hires <a href="#">READ MORE</a></p>
+      					</div>
+      					<div class="insights-section-slide-grid">
+      						<div class="insights-section-slide-card">
+      							<img class="insights-section-slide-card-image" src="/assets/images/insights-2.png" alt="insights-2">
+      							<p class="insights-section-slide-card-text">How to Use Talent Insights for Better Succession Planning <a href="#">READ MORE</a></p>
+      						</div>
+      						<div class="insights-section-slide-card">
+      							<img class="insights-section-slide-card-image" src="/assets/images/insights-3.png" alt="insights-3">
+      							<p class="insights-section-slide-card-text">Creating a High-Performing Leadership Team: Where to Start <a href="#">READ MORE</a></p>
+      						</div>
+      						<div class="insights-section-slide-card">
+      							<img class="insights-section-slide-card-image" src="/assets/images/insights-4.png" alt="insights-4">
+      							<p class="insights-section-slide-card-text">Creating a High-Performing Leadership Team: Where to Start <a href="#">READ MORE</a></p>
+      						</div>
+      						<div class="insights-section-slide-card">
+      							<img class="insights-section-slide-card-image" src="/assets/images/insights-5.png" alt="insights-5">
+      							<p class="insights-section-slide-card-text">How to Use Talent Insights for Better Succession Planning <a href="#">READ MORE</a></p>
+      						</div>
+      					</div>
+      				</div>
+      			</div>
+      			<button class="insights-section-btn-prev">
+      				<img src="assets/images/slider-btn.png" alt="insights-slider-btn-prev">
+      			</button>
+      			<button class="insights-section-btn-next">
+      				<img src="assets/images/slider-btn.png" alt="insights-slider-btn-next">
+      			</button>
+      		</div>
+      	</div>
+      </div>
+      <div class="help-section">
+      	<div class="container">
+      		<div class="help-section-top">
+      			<h2 class="desktop">How<br>we help:</h2>
+      			<h2 class="mobile">How we help:</h2>
+      			<p class="help-section-text">We identify, attract and engage, assess, and develop leaders who shape the future of your organisation. Leveraging global reach and deep sector knowledge, our tailored executive search and leadership services unlock potential at the highest level.</p>
+      		</div>
+      		<div class="help-section-body">
+      			<div class="help-section-row">
+      				<h3 class="help-section-item">Executive Search</h3>
+      				<h3 class="help-section-item">Interim Management</h3>
+      				<h3 class="help-section-item">Leadership Advisory Services </h3>
+      			</div>
+      			<div class="help-section-row">
+      				<h3 class="help-section-item">Diversity, Equity and Inclusion Consulting</h3>
+      				<h3 class="help-section-item">Senior Management Recruitment</h3>
+      			</div>
+      		</div>
+      	</div>
+      </div>
+      <div class="case-section">
+      	<div class="container">
+      		<h2>Case Studies</h2>
+      		<div class="insights-section-slider swiper">
+      			<div class="swiper-wrapper">
+      				<div class="swiper-slide case-section-slide">
+      					<div class="insights-section-slide-card">
+      						<img class="insights-section-slide-card-image" src="/assets/images/insights-2.png" alt="insights-2">
+      						<p class="insights-section-slide-card-text">How to Use Talent Insights for Better Succession Planning <a href="#">READ MORE</a></p>
+      					</div>
+      					<div class="insights-section-slide-card">
+      						<img class="insights-section-slide-card-image" src="/assets/images/insights-2.png" alt="insights-2">
+      						<p class="insights-section-slide-card-text">How to Use Talent Insights for Better Succession Planning <a href="#">READ MORE</a></p>
+      					</div>
+      				</div>
+      				<div class="swiper-slide case-section-slide">
+      					<div class="insights-section-slide-card">
+      						<img class="insights-section-slide-card-image" src="/assets/images/insights-2.png" alt="insights-2">
+      						<p class="insights-section-slide-card-text">How to Use Talent Insights for Better Succession Planning <a href="#">READ MORE</a></p>
+      					</div>
+      					<div class="insights-section-slide-card">
+      						<img class="insights-section-slide-card-image" src="/assets/images/insights-2.png" alt="insights-2">
+      						<p class="insights-section-slide-card-text">How to Use Talent Insights for Better Succession Planning <a href="#">READ MORE</a></p>
+      					</div>
+      				</div>
+      				<div class="swiper-slide case-section-slide">
+      					<div class="insights-section-slide-card">
+      						<img class="insights-section-slide-card-image" src="/assets/images/insights-2.png" alt="insights-2">
+      						<p class="insights-section-slide-card-text">How to Use Talent Insights for Better Succession Planning <a href="#">READ MORE</a></p>
+      					</div>
+      					<div class="insights-section-slide-card">
+      						<img class="insights-section-slide-card-image" src="/assets/images/insights-2.png" alt="insights-2">
+      						<p class="insights-section-slide-card-text">How to Use Talent Insights for Better Succession Planning <a href="#">READ MORE</a></p>
+      					</div>
+      				</div>
+      				<div class="swiper-slide case-section-slide">
+      					<div class="insights-section-slide-card">
+      						<img class="insights-section-slide-card-image" src="/assets/images/insights-2.png" alt="insights-2">
+      						<p class="insights-section-slide-card-text">How to Use Talent Insights for Better Succession Planning <a href="#">READ MORE</a></p>
+      					</div>
+      					<div class="insights-section-slide-card">
+      						<img class="insights-section-slide-card-image" src="/assets/images/insights-2.png" alt="insights-2">
+      						<p class="insights-section-slide-card-text">How to Use Talent Insights for Better Succession Planning <a href="#">READ MORE</a></p>
+      					</div>
+      				</div>
+      			</div>
+      			<button class="insights-section-btn-prev">
+      				<img src="assets/images/slider-btn.png" alt="insights-slider-btn-prev">
+      			</button>
+      			<button class="insights-section-btn-next">
+      				<img src="assets/images/slider-btn.png" alt="insights-slider-btn-next">
+      			</button>
+      		</div>
+      	</div>
+      </div>
+      <div class="grid-section">
+      	<div class="grid-section-row">
+      		<div class="grid-section-column">
+      			<div class="grid-section-item">
+      				<h3><span>15+</span><br>YEARS</h3>
+      				<p>Novo consultants have on average over<br>15 years executive  search experience.</p>
+      			</div>
+      			<div class="grid-section-item">
+      				<h3><span>70%</span></h3>
+      				<p>Of our assignments are with existing clients.</p>
+      			</div>
+      		</div>
+      		<div class="grid-section-column">
+      			<div class="grid-section-item">
+      				<h2>8,000+</h2>
+      				<p>We have worked with over 8,000 CEO’s and MD’s.</p>
+      			</div>
+      		</div>
+      	</div>
+      	<div class="grid-section-row">
+      		<div class="grid-section-column">
+      			<img src="/assets/images/leaders-1.png" alt="leaders-1">
+      		</div>
+      		<div class="grid-section-column">
+      			<div class="grid-section-item">
+      				<h3>Leaders in our field</h3>
+      				<a href="#" class="button primary">Let’s talk</a>
+      			</div>
+      		</div>
+      		<div class="grid-section-column">
+      			<img src="/assets/images/leaders-2.png" alt="leaders-2">
+      		</div>
+      	</div>
+      	<div class="grid-section-row">
+      		<div class="grid-section-column">
+      			<div class="grid-section-item">
+      				<h3><span>90%</span></h3>
+      				<p>Of our client projects incorporate<br> international executive search.</p>
+      			</div>
+      			<div class="grid-section-item">
+      				<h3><span>15+</span><br>YEARS</h3>
+      				<p>Novo consultants have on average over<br>15 years executive  search experience.</p>
+      			</div>
+      		</div>
+      		<div class="grid-section-column">
+      			<div class="grid-section-item">
+      				<h2>4 weeks</h2>
+      				<p>Is the average time for our<br> assignments to reach client interview.</p>
+      			</div>
+      		</div>
+      	</div>
+      </div>
+      <div class="sector-section">
+      	<div class="container">
+      		<div class="sector-section-top">
+      			<h2>Sector Experience</h2>
+      			<a href="#" class="button primary">View All Sectors</a>
+      		</div>
+      		<div class="sector-section-grid">
+      			<ul class="sector-section-column">
+      				<li><a href="#" class="sector-section-link">Accountancy and Financial</a></li>
+      				<li><a href="#" class="sector-section-link">Leadership</a></li>
+      				<li><a href="#" class="sector-section-link">Aerospace, Aviation and Defence</a></li>
+      				<li><a href="#" class="sector-section-link">Construction and Property</a></li>
+      			</ul>
+      			<ul class="sector-section-column">
+      				<li><a href="#" class="sector-section-link">Consumer Products and FMCG</a></li>
+      				<li><a href="#" class="sector-section-link">Energy</a></li>
+      				<li><a href="#" class="sector-section-link">Engineering</a></li>
+      				<li><a href="#" class="sector-section-link">Environmental</a></li>
+      				<li><a href="#" class="sector-section-link">Financial Services</a></li>
+      			</ul>
+      			<ul class="sector-section-column">
+      				<li><a href="#" class="sector-section-link">Healthcare and Life Sciences</a></li>
+      				<li><a href="#" class="sector-section-link">Legal</a></li>
+      				<li><a href="#" class="sector-section-link">Manufacturing and Industrial</a></li>
+      				<li><a href="#" class="sector-section-link">Marketing and eCommerce</a></li>
+      			</ul>
+      			<ul class="sector-section-column">
+      				<li><a href="#" class="sector-section-link">Not for Profit and Third Sector</a></li>
+      				<li><a href="#" class="sector-section-link">Public Sector</a></li>
+      				<li><a href="#" class="sector-section-link">Renewable Energy</a></li>
+      				<li><a href="#" class="sector-section-link">Sports and Leisure</a></li>
+      				<li><a href="#" class="sector-section-link">Support Services</a></li>
+      				<li><a href="#" class="sector-section-link">Technology</a></li>
+      			</ul>
+      		</div>
+      	</div>
+      </div>
+      <div class="case-section explore-section">
+      	<div class="container">
+      		<h2>Explore Leadership Roles</h2>
+      		<div class="insights-section-slider swiper">
+      			<div class="swiper-wrapper">
+      				<div class="swiper-slide case-section-slide">
+      					<div class="insights-section-slide-card">
+      						<img class="insights-section-slide-card-image" src="/assets/images/explore-1.png" alt="explore-1">
+      						<p class="insights-section-slide-card-text">Chief Marketing Officer (CMO) Recruitment <a href="#">READ MORE</a></p>
+      					</div>
+      					<div class="insights-section-slide-card">
+      						<img class="insights-section-slide-card-image" src="/assets/images/explore-2.png" alt="explore-2">
+      						<p class="insights-section-slide-card-text">Head of Digital Recruitment <a href="#">READ MORE</a></p>
+      					</div>
+      				</div>
+      				<div class="swiper-slide case-section-slide">
+      					<div class="insights-section-slide-card">
+      						<img class="insights-section-slide-card-image" src="/assets/images/explore-1.png" alt="explore-1">
+      						<p class="insights-section-slide-card-text">Chief Marketing Officer (CMO) Recruitment <a href="#">READ MORE</a></p>
+      					</div>
+      					<div class="insights-section-slide-card">
+      						<img class="insights-section-slide-card-image" src="/assets/images/explore-2.png" alt="explore-2">
+      						<p class="insights-section-slide-card-text">Head of Digital Recruitment <a href="#">READ MORE</a></p>
+      					</div>
+      				</div>
+      				<div class="swiper-slide case-section-slide">
+      					<div class="insights-section-slide-card">
+      						<img class="insights-section-slide-card-image" src="/assets/images/explore-1.png" alt="explore-1">
+      						<p class="insights-section-slide-card-text">Chief Marketing Officer (CMO) Recruitment <a href="#">READ MORE</a></p>
+      					</div>
+      					<div class="insights-section-slide-card">
+      						<img class="insights-section-slide-card-image" src="/assets/images/explore-2.png" alt="explore-2">
+      						<p class="insights-section-slide-card-text">Head of Digital Recruitment <a href="#">READ MORE</a></p>
+      					</div>
+      				</div>
+      				<div class="swiper-slide case-section-slide">
+      					<div class="insights-section-slide-card">
+      						<img class="insights-section-slide-card-image" src="/assets/images/explore-1.png" alt="explore-1">
+      						<p class="insights-section-slide-card-text">Chief Marketing Officer (CMO) Recruitment <a href="#">READ MORE</a></p>
+      					</div>
+      					<div class="insights-section-slide-card">
+      						<img class="insights-section-slide-card-image" src="/assets/images/explore-2.png" alt="explore-2">
+      						<p class="insights-section-slide-card-text">Head of Digital Recruitment <a href="#">READ MORE</a></p>
+      					</div>
+      				</div>
+      			</div>
+      			<button class="insights-section-btn-prev">
+      				<img src="assets/images/slider-btn.png" alt="insights-slider-btn-prev">
+      			</button>
+      			<button class="insights-section-btn-next">
+      				<img src="assets/images/slider-btn.png" alt="insights-slider-btn-next">
+      			</button>
+      		</div>
+      	</div>
+      </div>
+      <div class="text-section">
+      	<div class="container">
+      		<div class="text-section-content">
+      			<h2>Discover how we can help you appoint exceptional leadership talent for your business</h2>
+      			<p><span>Book a confidential call with one of our executive search Directors</span></p>
+      			<a href="#" class="button primary">Book a call</a>
+      		</div>
+      	</div>
+      </div>
+      <div class="team-section">
+      	<div class="container">
+      		<h2>Leadership Team</h2>
+      		<div class="team-section-body">
+      			<div class="team-section-image">
+      				<img src="/assets/images/team.png" alt="team-section-image" loading="lazy">
+      			</div>
+      			<div class="team-section-content">
+      				<h3>George Woodward</h3>
+      				<p class="team-section-job-title">Director</p>
+      				<div class="team-section-text">
+      					<p>Over 20 years + experience</p>
+      					<p>LinkedIn Profile:</p>
+      				</div>
+      				<a href="#" class="button primary">
+      					Linkedin
+      					<span>in</span>
+      				</a>
+      				<a href="#" class="button primary">Full Profile</a>
+      				<div class="team-section-text">
+      					<p><strong>My sectors</strong></p>
+      					<p>My sectors Consumer</p>
+      				</div>
+      			</div>
+      		</div>
+      	</div>
+      </div>
+       <div class="text-section">
+       	<div class="container">
+       		<div class="text-section-content">
+       			<h2>Subscribe to our newsletter</h2>
+       			<p><span><strong>Innovate News: C-Level Insights</strong></span><br>Innovate News Delivers trends and strategies to strengthen boards and empower C-level leaders to drive success</p>
+       			<a href="#" class="button primary">Book a call</a>
+       		</div>
+       	</div>
+       </div>
+    </main>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-body">
+                <div class="footer-column">
+                    <a href="#" class="footer-logo">
+                        <img src="/assets/images/hero-section-logo.png" alt="footer-logo" loading="lazy">
+                    </a>
+                    <div class="footer-socials">
+                        <a href="#" class="footer-social">
+                            X
+                        </a>
+                        <a href="#" class="footer-social">
+                            f
+                        </a>
+                        <a href="#" class="footer-social">
+                            in
+                        </a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <p class="footer-heading">Services</p>
+                    <ul class="footer-list">
+                        <li>
+                            <a href="#" class="footer-link">Executive Search</a>
+                        </li>
+                        <li>
+                            <a href="#" class="footer-link">Executive Search</a>
+                        </li>
+                        <li>
+                            <a href="#" class="footer-link">Executive Search</a>
+                        </li>
+                        <li>
+                            <a href="#" class="footer-link">Executive Search</a>
+                        </li>
+                        <li>
+                            <a href="#" class="footer-link">Executive Search</a>
+                        </li>
+                        <li>
+                            <a href="#" class="footer-link">Executive Search</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <p class="footer-heading">Services</p>
+                    <ul class="footer-list">
+                        <li>
+                            <a href="#" class="footer-link">Executive Search</a>
+                        </li>
+                        <li>
+                            <a href="#" class="footer-link">Executive Search</a>
+                        </li>
+                        <li>
+                            <a href="#" class="footer-link">Executive Search</a>
+                        </li>
+                        <li>
+                            <a href="#" class="footer-link">Executive Search</a>
+                        </li>
+                        <li>
+                            <a href="#" class="footer-link">Executive Search</a>
+                        </li>
+                        <li>
+                            <a href="#" class="footer-link">Executive Search</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <p class="footer-heading">Services</p>
+                    <ul class="footer-list">
+                        <li>
+                            <a href="#" class="footer-link">Executive Search</a>
+                        </li>
+                        <li>
+                            <a href="#" class="footer-link">Executive Search</a>
+                        </li>
+                        <li>
+                            <a href="#" class="footer-link">Executive Search</a>
+                        </li>
+                        <li>
+                            <a href="#" class="footer-link">Executive Search</a>
+                        </li>
+                        <li>
+                            <a href="#" class="footer-link">Executive Search</a>
+                        </li>
+                        <li>
+                            <a href="#" class="footer-link">Executive Search</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <p class="footer-heading">Contact Us</p>
+                    <div class="footer-text">
+                        <p>London: 020 7222 5525</p>
+                        <p>London: 020 7222 5525</p>
+                        <p>London: 020 7222 5525</p>
+                        <p>London: 020 7222 5525</p>
+                    </div>
+                    <p class="footer-heading">Quick Links</p>
+                    <ul class="footer-list">
+                        <li>
+                            <a href="#" class="footer-link">Home</a>
+                        </li>
+                        <li>
+                            <a href="#" class="footer-link">Executive Search</a>
+                        </li>
+                        <li>
+                            <a href="#" class="footer-link">Executive Search</a>
+                        </li>
+                        <li>
+                            <a href="#" class="footer-link">Executive Search</a>
+                        </li>
+                        <li>
+                            <a href="#" class="footer-link">Executive Search</a>
+                        </li>
+                        <li>
+                            <a href="#" class="footer-link">Executive Search</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/choices.js/public/assets/scripts/choices.min.js"></script>
+  <script src="assets/js/vendor.min.js" defer></script>
+  <script src="assets/js/app.js" defer></script>
+</body>
+
+</html>
